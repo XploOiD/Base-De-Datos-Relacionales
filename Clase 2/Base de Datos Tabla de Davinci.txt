@@ -1,0 +1,41 @@
+Create table inventos(
+	id integer primary key autoincrement,
+    nombre_invento text not null,
+  	años_creacion integer not null,
+  	descripcion text
+);
+
+insert into inventos(nombre_invento,años_creacion,descripcion)
+values('Maquina Voladora',1485,'Un diseño para un aparato volador');
+
+insert into inventos(nombre_invento,años_creacion,descripcion)
+values('Tanque Acorazado',1487,'Vehiculo de combate con proteccion');
+
+insert into inventos(nombre_invento,años_creacion,descripcion)
+values('Reloj Mecanico',1490,'Es un dispositivo para medir el tiempo');
+
+insert into inventos(nombre_invento,años_creacion,descripcion)
+values('Hombre de Vitruvio',1492,'Estudio de las proporciones del cuerpo');
+
+select * from inventos;
+select nombre_invento,años_creacion from inventos;
+select nombre_invento,años_creacion from inventos where años_creacion>=1487;
+
+select nombre_invento,años_creacion from inventos order by años_creacion asc;
+select nombre_invento,años_creacion from inventos order by años_creacion desc;
+
+update inventos set descripcion = 'Aparato diseñado para volar como un pajaro, con alas impulsadas por un sistema de poleas' where nombre_invento = 'Maquina Voladora'
+select nombre_invento, años_creacion from inventos where años_creacion between 1483 and 1500 order by años_creacion desc;
+select nombre_invento,descripcion from inventos where nombre_invento like '%reloj%'
+select count(*) from inventos;
+select nombre_invento,descripcion from inventos where descripcion like '%diseñado%' 
+select nombre_invento,años_creacion from inventos order by años_creacion asc limit 4;
+
+crear tabla
+insertar datos
+seleccionar registros
+eliminamos registro
+contar datos
+buscamos palabras claves
+ordenamos datos.
+
